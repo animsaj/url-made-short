@@ -5,7 +5,7 @@ var validUrl = require('valid-url');
 var app = express();
 app.use("/", express.static(__dirname + '/public'));
 //connect to db
-var url = 'mongodb://' + DB_USER + ':' + DB_PASSWORD + '@ds011765.mlab.com:11765/' + DB_NAME;
+var url = 'mongodb://' + process.env.DB_USER + ':' + process.env.DB_PASSWORD + '@ds011765.mlab.com:11765/' + process.env.DB_NAME;
 mongoose.connect(url);
 //Schema definition
 var urlSchema = new mongoose.Schema({
