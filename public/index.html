@@ -1,0 +1,26 @@
+<html>
+    <title>URL Shortener</title>
+    <style>
+        body {
+            background-color: #222222; 
+            color: #FCFCFC; 
+            font-family: 'Inconsolata'; 
+            font-size: 24px;
+        }
+        code {
+            font-size: 18px;
+            color:aqua;
+        }
+    </style>
+    <body>
+        <h1>Hello, from the URL Shortener!</h1>
+        <p>I can pass a URL as a parameter and I will receive a shortened URL in the JSON response</p>
+        <p>If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.</p>
+        <p>When I visit that shortened URL, it will redirect me to my original link.</p>
+        <h3>Example usage:</h3>
+        <code>https://url-made-short.herokuapp.com/new/https://www.youtube.com/</code><br>
+        <code>https://url-made-short.herokuapp.com/1</code>
+        <h3>Example output:</h3>
+        <code>{ "longUrl":"https://www.youtube.com/","shortUrl":"https://url-made-short.herokuapp.com/1" }</code>
+    </body>
+</html>
